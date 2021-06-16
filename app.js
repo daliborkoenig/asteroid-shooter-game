@@ -246,12 +246,18 @@ function fire(){
 function gameStart(){
   createPlayer()
   createEnemy()
+  gameMusic.pause();
+  gameMusic.currentTime = 0
+  gameMusic.play();
 }
 function stopGame(){
   gameOver.style.display = "block"
   finalScore.textContent = hero.score
   const player = document.querySelector(".player")
+  const asteroid = document.querySelector(".asteroid")
+  asteroid.remove()
   player.remove();
+  explosion.style.display = "none"
 }
 startGameBtn.onclick = () =>{
   startGame.style.display = "none"
