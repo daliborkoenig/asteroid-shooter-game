@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./images/spaceship.png" type="image/x-icon"/>
     <title>Asteroids</title>
 </head>
 <body>
     <div id="game-wrapper">
         <div id="result">
             <div id="score-wrapper">SCORE: <span id="score">0</span></div>
+            <div id="level-wrapper">LEVEL: <span id="level">1</span></div>
             <div id="lives-wrapper">LIVES: <span id="lives">3</span></div>
         </div>
         <div class="game-over">
@@ -21,9 +23,10 @@
         <div class="start-game">
             <div id="ship"></div>
             <div id="game-over"></div>
-            <div id="final">MOVE with: WASD / ARROWS, FIRE with SPACE<span id="final-score"></span></div>
+            <div id="final">MOVE with: WASD / ARROWS, <br>FIRE missiles with SPACE<span id="final-score"></span></div>
             <button id="start-game">START GAME</button>
         </div>
+        <div id="explosion"> </div>
     </div>
     <script src="./app.js"></script>
 </body>
